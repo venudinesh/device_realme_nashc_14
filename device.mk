@@ -95,7 +95,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libcamera_metadata_shim
 
-# Doze
 PRODUCT_PACKAGES += \
     OplusDoze
 
@@ -253,7 +252,8 @@ PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
 PRODUCT_PACKAGES += \
     WifiOverlay \
     TetheringConfigOverlay \
-    CarrierConfigOverlay
+    CarrierConfigOverlay \
+    OPlusExtrasResTarget
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -338,6 +338,8 @@ PRODUCT_PACKAGES += \
     fstab.mt6785 \
     fstab.mt6785_ramdisk \
     init.cgroup.rc \
+    init.oplus_extras.rc \
+    init.connectivity.common.rc \
     init.connectivity.rc \
     init.modem.rc \
     init.mt6785.rc \
