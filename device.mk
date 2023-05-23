@@ -96,7 +96,7 @@ PRODUCT_PACKAGES += \
     libcamera_metadata_shim
 
 PRODUCT_PACKAGES += \
-    OplusDoze
+    OPlusExtras
 
 # DRM
 PRODUCT_PACKAGES += \

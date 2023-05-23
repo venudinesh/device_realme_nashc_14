@@ -6,7 +6,7 @@
 <resources>
 
     <!-- Whether device supports Power Efficient Workqueue -->
-    <bool name="config_deviceSupportsPowerEfficientWorkqueue">true</bool>
+    <bool name="config_deviceSupportsPowerEfficientWorkqueue">false</bool>
 
     <!-- Whether device supports Ambient Display Gestures -->
     <bool name="config_deviceSupportsAmbientDisplayGestures">true</bool>
@@ -18,7 +18,7 @@
     <bool name="config_deviceSupportsHBM">true</bool>
 
     <!-- Whether device supports Disabling fsync -->
-    <bool name="config_deviceSupportsFSyncOff">true</bool>
+    <bool name="config_deviceSupportsFSyncOff">false</bool>
 
     <!-- Whether device supports High Touch Polling Rate -->
     <bool name="config_deviceSupportsHightTouchPollingRate">true</bool>
