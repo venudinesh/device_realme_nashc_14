@@ -99,7 +99,7 @@ PRODUCT_PACKAGES += \
     libcamera_metadata_shim_nashc
 
 PRODUCT_PACKAGES += \
-    OplusDoze
+    OPlusExtras
 
 # PowerOffAlarm
 PRODUCT_PACKAGES += \
