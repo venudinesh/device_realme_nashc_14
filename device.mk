@@ -197,7 +197,8 @@ PRODUCT_PACKAGES += \
 # Lineage Health
 PRODUCT_PACKAGES += \
     vendor.lineage.health-service.default
-
+# Vendor Log Tag
+include $(LOCAL_PATH)/vendor_logtag.mk
 # Media
 PRODUCT_PACKAGES += \
     libcodec2_hidl@1.1.vendor \
