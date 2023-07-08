@@ -12,10 +12,16 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
 # Inherit from device makefile.
 $(call inherit-product, device/realme/nashc/device.mk)
 
-# Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common VoltageOS stuff.
+$(call inherit-product, vendor/voltage/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_nashc
+# UDFPS animations
+EXTRA_UDFPS_ANIMATIONS := true
+
+# Bootanimation Resolution
+TARGET_BOOT_ANIMATION_RES := 2160
+
+PRODUCT_NAME := voltage_nashc
 PRODUCT_DEVICE := nashc
 PRODUCT_MANUFACTURER := Realme
 PRODUCT_BRAND := Realme
