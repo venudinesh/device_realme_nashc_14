@@ -75,6 +75,7 @@ ro.hardware.egl=meow
 debug.renderengine.backend=skiaglthreaded
 debug.hwui.skia_atrace_enabled=false
 ro.hwui.render_ahead=10
+debug.cpurend.vsync=false
 
 # SurfaceFlinger
 ro.surface_flinger.primary_display_orientation=ORIENTATION_0
