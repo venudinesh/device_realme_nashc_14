@@ -20,6 +20,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
+# ART
+PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := everything
+
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio.service.mediatek \
@@ -93,10 +96,15 @@ PRODUCT_PACKAGES += \
     libcamera2ndk_vendor
 
 PRODUCT_PACKAGES += \
-    libcamera_metadata_shim
+    libcamera_metadata_shim_nashc
 
+# Doze
 PRODUCT_PACKAGES += \
-    OPlusExtras
+    OplusDoze
+
+# PowerOffAlarm
+PRODUCT_PACKAGES += \
+    PowerOffAlarm
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -184,6 +192,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.light-service.nashc
 
+# Lineage Health
+PRODUCT_PACKAGES += \
+    vendor.lineage.health-service.default
+
 # LiveDisplay
 PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay@2.1-service-nashc
@@ -192,7 +204,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libcodec2_hidl@1.1.vendor \
     libcodec2_hidl@1.2.vendor \
-    libavservices_minijail_vendor \
+    libavservices_minijail.vendor \
     libstagefright_softomx_plugin.vendor \
     libsfplugin_ccodec_utils.vendor \
     libcodec2_soft_common.vendor
@@ -252,8 +264,7 @@ PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
 PRODUCT_PACKAGES += \
     WifiOverlay \
     TetheringConfigOverlay \
-    CarrierConfigOverlay \
-    OPlusExtrasResTarget
+    CarrierConfigOverlay
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -338,8 +349,6 @@ PRODUCT_PACKAGES += \
     fstab.mt6785 \
     fstab.mt6785_ramdisk \
     init.cgroup.rc \
-    init.oplus_extras.rc \
-    init.connectivity.common.rc \
     init.connectivity.rc \
     init.modem.rc \
     init.mt6785.rc \
