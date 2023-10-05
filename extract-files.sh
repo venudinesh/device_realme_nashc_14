@@ -51,14 +51,26 @@ done
 
 function blob_fixup {
     case "$1" in
+        vendor/bin/mnld)
+            "${PATCHELF}" --replace-needed "libsensorndkbridge.so" "libsensorndkbridge-hidl.so" "$2"
+            ;;
+        vendor/lib*/libcam.utils.sensorprovider.so)
+            "${PATCHELF}" --replace-needed "libsensorndkbridge.so" "libsensorndkbridge-hidl.so" "$2"
+            ;;
         vendor/lib64/hw/android.hardware.camera.provider@2.6-impl-mediatek.so)
             grep -q "libcamera_metadata_shim_nashc.so" "${2}" || "${PATCHELF}" --add-needed "libcamera_metadata_shim_nashc.so" "${2}"
             ;;
         vendor/lib*/hw/vendor.mediatek.hardware.pq@2.13-impl.so)
             "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${2}"
             ;;
+        vendor/lib*/libaalservice.so)
+            "${PATCHELF}" --replace-needed "libsensorndkbridge.so" "libsensorndkbridge-hidl.so" "$2"
+            ;;
         vendor/lib*/libmtkcam_stdutils.so)
             "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "$2"
+            ;;
+        vendor/lib64/hw/android.hardware.sensors@2.X-subhal-mediatek.so)
+            "${PATCHELF}" --replace-needed "libsensorndkbridge.so" "libsensorndkbridge-hidl.so" "$2"
             ;;
         vendor/lib64/libmtkcam_featurepolicy.so)
             # evaluateCaptureConfiguration()
