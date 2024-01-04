@@ -15,6 +15,9 @@ $(call inherit-product, device/realme/nashc/device.mk)
 # Inherit some common LineageOS stuff.
 $(call inherit-product, vendor/voltage/config/common_full_phone.mk)
 
+# UDFPS animations
+EXTRA_UDFPS_ANIMATIONS := true
+
 PRODUCT_NAME := voltage_nashc
 PRODUCT_DEVICE := nashc
 PRODUCT_MANUFACTURER := Realme
