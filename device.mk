@@ -349,7 +349,6 @@ PRODUCT_PACKAGES += \
     fstab.mt6785_ramdisk \
     init.cgroup.rc \
     init.oplus_extras.rc \
-    init.connectivity.common.rc \
     init.connectivity.rc \
     init.modem.rc \
     init.mt6785.rc \
