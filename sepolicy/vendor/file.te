@@ -27,6 +27,7 @@ type vendor_proc_fingerprint, fs_type, proc_type;
 
 # NFC
 type vendor_proc_nfc_chipset, fs_type, proc_type;
+
 # Sensors
 type vendor_proc_oplus_sensor_feature, fs_type, proc_type;
 type vendor_proc_oplus_sensor_param, fs_type, proc_type;
@@ -43,3 +44,4 @@ type vendor_proc_oplus_version, fs_type, proc_type;
 type proc_vm_dirty, fs_type, proc_type;
 type proc_sched_stune, fs_type, proc_type;
 type proc_sched_assist, fs_type, proc_type;
+
