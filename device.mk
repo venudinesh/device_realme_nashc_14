@@ -344,11 +344,11 @@ PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl
 
 # Rootdir
+# Rootdir
 PRODUCT_PACKAGES += \
     fstab.mt6785 \
     fstab.mt6785_ramdisk \
-    init.cgroup.rc \
-    init.oplus_extras.rc \
+    init.mt6785.power.rc \
     init.connectivity.rc \
     init.modem.rc \
     init.mt6785.rc \
