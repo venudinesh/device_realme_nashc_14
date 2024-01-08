@@ -104,9 +104,9 @@ PRODUCT_COPY_FILES += \
     system/core/libprocessgroup/profiles/cgroups_30.json:$(TARGET_COPY_OUT_VENDOR)/etc/cgroups.json \
     $(LOCAL_PATH)/configs/task_profiles.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json
 
-# Display
+# Doze
 PRODUCT_PACKAGES += \
-    OPlusExtras
+    OplusDoze
 
 # PowerOffAlarm
 PRODUCT_PACKAGES += \
@@ -270,8 +270,7 @@ PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
 PRODUCT_PACKAGES += \
     WifiOverlay \
     TetheringConfigOverlay \
-    CarrierConfigOverlay \
-    OPlusExtrasResTarget
+    CarrierConfigOverlay
 
 # Permissions
 PRODUCT_COPY_FILES += \
