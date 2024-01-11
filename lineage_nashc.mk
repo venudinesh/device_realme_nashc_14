@@ -18,32 +18,17 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Call the BCR setup
 $(call inherit-product-if-exists, vendor/bcr/bcr.mk)
 
-MATRIXX_MAINTAINER := Fastledx
-MATRIXX_CHIPSET := MT6785
-MATRIXX_BATTERY := 5000mAh
-MATRIXX_DISPLAY := 1080x2400
-
-#EPPE
-TARGET_DISABLE_EPPE := true
-
-#BOOT_ANIMATION
-TARGET_BOOT_ANIMATION_RES := 1080
-
-#AUDIOFX
-TARGET_EXCLUDES_AUDIOFX := true
-
-#Build with Gapps:
-WITH_GMS := true
-
-#Device has UDFPS:
+# Device config
 TARGET_HAS_UDFPS := true
+TARGET_ENABLE_BLUR := true
+TARGET_EXCLUDES_AUDIOFX := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
 
-#Add Google Contacts, Dialer & Messaging 
-BUILD_GOOGLE_CONTACTS := true
-BUILD_GOOGLE_DIALER := true
-BUILD_GOOGLE_MESSAGE := true
+# Maintainer
+ALPHA_BUILD_TYPE := UnOfficial
+ALPHA_MAINTAINER := Ereh
 
-PRODUCT_NAME := voltage_nashc
+PRODUCT_NAME := lneage_nashc
 PRODUCT_DEVICE := nashc
 PRODUCT_MANUFACTURER := Realme
 PRODUCT_BRAND := Realme
