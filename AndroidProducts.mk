@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/voltage_nashc.mk
+    $(LOCAL_DIR)/banana_nashc.mk
 
 COMMON_LUNCH_CHOICES := \
-    voltage_nashc-user \
-    voltage_nashc-userdebug \
-    voltage_nashc-eng
+    banana_nashc-user \
+    banana_nashc-userdebug \
+    banana_nashc-eng

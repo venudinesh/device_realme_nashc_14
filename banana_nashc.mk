@@ -12,13 +12,22 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
 # Inherit from device makefile.
 $(call inherit-product, device/realme/nashc/device.mk)
 
-# Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/voltage/config/common_full_phone.mk)
+# Inherit some common Bananadroid stuff.
+$(call inherit-product, vendor/banana/config/common.mk)
 
-# UDFPS animations
-EXTRA_UDFPS_ANIMATIONS := true
+# Supported Device Flags. (Features)
+BANANA_BUILD_TYPE := UNOFFICIAL
+BANANA_MAINTAINER := Sukuna
+TARGET_USES_AOSP_RECOVERY := true
+IS_PHONE := trueTARGET_ENABLE_BLUR := true
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_EXCLUDE_MATLOG := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_SUPPORTS_QUICK_TAP := true
+WITH_GAPPS := true
+TARGET_HAS_UDFPS := true
 
-PRODUCT_NAME := voltage_nashc
+PRODUCT_NAME := banana_nashc
 PRODUCT_DEVICE := nashc
 PRODUCT_MANUFACTURER := Realme
 PRODUCT_BRAND := Realme
